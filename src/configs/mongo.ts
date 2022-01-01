@@ -8,6 +8,7 @@ export const getMongoConfig = async (configService: ConfigService): Promise<Type
 const getMongoUri = (configService: ConfigService): string =>
   'mongodb://' +
   configService.get('MONGO_LOGIN') +
+  ':' +
   configService.get('MONGO_PASSWORD') +
   '@' +
   configService.get('MONGO_HOST') +
